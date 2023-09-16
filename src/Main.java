@@ -6,11 +6,15 @@ import java.text.DecimalFormat;
 public class Main {
 
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null, "Welcome to Temperature Converter!");
+        new Main();
+    }
+
+    public Main(){
         get_temperature_measurements();
     }
 
-    public static void get_temperature_measurements(){
+    public void get_temperature_measurements(){
+        JOptionPane.showMessageDialog(null, "Welcome to Temperature Converter!");
         String temp_scale;
         ArrayList<String> temperature_scales = new ArrayList<>(Arrays.asList("F", "C", "K"));
         do {
@@ -56,7 +60,7 @@ public class Main {
         }
     }
 
-    public static void convert_temperature(String temp_scale, String convert_scale){
+    public void convert_temperature(String temp_scale, String convert_scale){
         DecimalFormat df = new DecimalFormat("0.00");
 
         if (temp_scale.equals("F")){
